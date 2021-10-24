@@ -50,6 +50,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>React basics</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p className="description">Greeting function with props:</p>
         <Greeting greeting="Hi">everybody</Greeting>
@@ -57,7 +58,7 @@ function App() {
         <p className="description">Clicker function with useState:</p>
         <Clicker />
 
-        <p className="description">API fetch request with useEffect:"</p>
+        <p className="description">API fetch request with useEffect:</p>
         <TvShowList />
 
         <p className="description">Class function:</p>
