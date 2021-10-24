@@ -3,7 +3,7 @@ import './App.css';
 
 function Greeting(props) {
   console.log(props);
-  return <div>Greetings {props.name}!</div>
+  return <div>{props.greeting} {props.children}!</div>
 }
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <Greeting name="everybody" />
+        <Greeting greeting="Hi">everybody</Greeting>
 
         <a
           className="App-link"
