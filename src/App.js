@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import logo from './logo.svg';
 import './App.css';
 
@@ -45,6 +45,12 @@ function TvShowList() {
   )
 }
 
+class ClassGreeting extends React.Component {
+  render() {
+    const { name } = this.props;
+    return <div>Hello {name}</div>
+  }
+}
 
 function App() {
   return (
@@ -62,6 +68,7 @@ function App() {
         <TvShowList />
 
         <p className="description">Class function:</p>
+        <ClassGreeting name="World!" />
 
         <a
           className="App-link"
