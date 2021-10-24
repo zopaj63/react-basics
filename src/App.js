@@ -19,19 +19,28 @@ function Clicker() {
 
 //https://api.tvmaze.com/search/shows?q=arrested
 function TvShowList() {
+  const [json, setJson] = useState(null);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
     // console.log("I am rendered!");
     fetch("https://api.tvmaze.com/search/shows?q=arrested")
       .then(response => response.json())
-      .then(json => console.log(json))
-      .catch(error => console.log(error));
+      .then(json => setJson(json))
+      .catch(error => setError(error));
   }, []);
+
+  if (error !== null) {
+    return <div>Error!</div>;
+  }
+
+  if (json === null) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
-      <div>Game of Thrones</div>
-      <div>Deadwood</div>
-      <div>Friday Night Dinner</div>
+      {json.map(item => <div key={item.show.id}>{item.show.name}</div>)}
     </div>
   )
 }
