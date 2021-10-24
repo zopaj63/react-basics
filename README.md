@@ -1,5 +1,7 @@
 # Create React App - basics
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2ac696cf-6ff6-4e41-9759-db16b6e8da36/deploy-status)](https://app.netlify.com/sites/zopaj63-react-basics/deploys)
+
+The most basic thing we need to know about react application! (DŠ)
 ## Available Scripts
 ### `npm start`
 Runs the app in the development mode.\

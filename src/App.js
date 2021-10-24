@@ -67,7 +67,7 @@ function App() {
         <p className="description">API fetch request with useEffect:</p>
         <TvShowList />
 
-        <p className="description">Class function:</p>
+        <p className="description">ClassGreeting Component:</p>
         <ClassGreeting name="World!" />
 
         <a
